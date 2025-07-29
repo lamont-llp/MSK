@@ -3,6 +3,7 @@ const IMAGES = {
     logoBlack : new URL('./MSK-black.png', import.meta.url).href,
     tshirtBlack : new URL('./tshirt-black.png', import.meta.url).href,
     tshirtWhite : new URL('./tshirt-white.png', import.meta.url).href,
+    bg : new URL('./dark-surface.jpg', import.meta.url).href,
 }
 
 export default IMAGES

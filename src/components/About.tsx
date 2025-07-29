@@ -88,7 +88,7 @@ const About = () => {
             <div className="bg-black rounded-2xl p-8 text-white">
               <div className="space-y-6">
                 <div className="text-center">
-                  <div className="text-6xl font-black mb-4">2019</div>
+                  <div className="text-6xl font-black mb-4">2007</div>
                   <p className="text-gray-300">Year Founded</p>
                 </div>
                 
