@@ -1,104 +1,111 @@
-import React, { useState } from 'react';
-import { ShoppingCart, Heart, Eye, Star } from 'lucide-react';
-import IMAGES from '../assets/Images';
+import { useState } from "react";
+import { ShoppingCart, Heart, Eye, Star } from "lucide-react";
+import IMAGES from "../assets/Images";
 
 const Products = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeCategory, setActiveCategory] = useState("all");
 
   const categories = [
-    { id: 'all', name: 'All Products' },
-    { id: 'tshirts', name: 'T-Shirts' },
-    { id: 'caps', name: 'Caps' },
-    { id: 'limited', name: 'Limited Edition' },
+    { id: "all", name: "All Products" },
+    { id: "tshirts", name: "T-Shirts" },
+    { id: "caps", name: "Caps" },
+    { id: "limited", name: "Limited Edition" },
   ];
 
   const products = [
     {
       id: 1,
-      name: 'Ma Se Kind Classic Tee',
-      category: 'tshirts',
-      price: 'R299',
-      originalPrice: 'R399',
-      image: '/api/placeholder/300/300',
+      name: "Ma Se Kind Classic Tee",
+      category: "tshirts",
+      price: "R290",
+      originalPrice: null,
+      image: "/api/placeholder/300/300",
       rating: 4.8,
       reviews: 24,
-      badge: 'Bestseller',
-      colors: ['Black', 'White', 'Grey']
+      badge: "Bestseller",
+      colors: ["Black", "White", "Grey"],
     },
     {
       id: 2,
-      name: 'Township Pride Cap',
-      category: 'caps',
-      price: 'R199',
+      name: "Ma Se Kind Classic Hoodie",
+      category: "limited",
+      price: "R390",
       originalPrice: null,
-      image: '/api/placeholder/300/300',
-      rating: 4.9,
-      reviews: 18,
-      badge: 'New',
-      colors: ['Black', 'White']
+      image: "/api/placeholder/300/300",
+      rating: 5.0,
+      reviews: 12,
+      badge: "Limited",
+      colors: ["Black", "Gold"],
     },
     {
       id: 3,
-      name: 'Heritage Collection Tee',
-      category: 'limited',
-      price: 'R449',
+      name: "Ma Se Kind Classic Cap",
+      category: "caps",
+      price: "R150",
       originalPrice: null,
-      image: '/api/placeholder/300/300',
-      rating: 5.0,
-      reviews: 12,
-      badge: 'Limited',
-      colors: ['Black', 'Gold']
+      image: "/api/placeholder/300/300",
+      rating: 4.9,
+      reviews: 18,
+      badge: "New",
+      colors: ["Black", "White"],
     },
     {
       id: 4,
-      name: 'Unity Streetwear Tee',
-      category: 'tshirts',
-      price: 'R329',
+      name: "MSK Kiddie Tee",
+      category: "tshirts",
+      price: "R190",
       originalPrice: null,
-      image: '/api/placeholder/300/300',
+      image: "/api/placeholder/300/300",
       rating: 4.7,
       reviews: 31,
       badge: null,
-      colors: ['Black', 'White', 'Grey', 'Navy']
+      colors: ["Black", "White", "Grey", "Navy"],
     },
     {
       id: 5,
-      name: 'Culture Cap Collection',
-      category: 'caps',
-      price: 'R249',
-      originalPrice: 'R299',
-      image: '/api/placeholder/300/300',
+      name: "Culture Cap Collection",
+      category: "caps",
+      price: "R249",
+      originalPrice: "R299",
+      image: "/api/placeholder/300/300",
       rating: 4.6,
       reviews: 15,
-      badge: 'Sale',
-      colors: ['Black', 'White', 'Grey']
+      badge: "Sale",
+      colors: ["Black", "White", "Grey"],
     },
     {
       id: 6,
-      name: 'Founder\'s Edition Tee',
-      category: 'limited',
-      price: 'R499',
+      name: "Founder's Edition Tee",
+      category: "limited",
+      price: "R499",
       originalPrice: null,
-      image: '/api/placeholder/300/300',
+      image: "/api/placeholder/300/300",
       rating: 4.9,
       reviews: 8,
-      badge: 'Exclusive',
-      colors: ['Black', 'White']
+      badge: "Exclusive",
+      colors: ["Black", "White"],
     },
   ];
 
-  const filteredProducts = activeCategory === 'all' 
-    ? products 
-    : products.filter(product => product.category === activeCategory);
+  const filteredProducts =
+    activeCategory === "all"
+      ? products
+      : products.filter((product) => product.category === activeCategory);
 
   const getBadgeColor = (badge: string) => {
     switch (badge) {
-      case 'Bestseller': return 'bg-green-500';
-      case 'New': return 'bg-blue-500';
-      case 'Limited': return 'bg-red-500';
-      case 'Sale': return 'bg-orange-500';
-      case 'Exclusive': return 'bg-purple-500';
-      default: return 'bg-gray-500';
+      case "Bestseller":
+        return "bg-green-500";
+      case "New":
+        return "bg-blue-500";
+      case "Limited":
+        return "bg-red-500";
+      case "Sale":
+        return "bg-orange-500";
+      case "Exclusive":
+        return "bg-purple-500";
+      default:
+        return "bg-gray-500";
     }
   };
 
@@ -111,11 +118,11 @@ const Products = () => {
             SHOP COLLECTION
           </div>
           <h2 className="text-4xl md:text-5xl font-black text-black mb-4">
-            Premium <span className="text-gray-600">Streetwear</span>
+            Premium <span className="text-gray-600">Gear</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Authentic South African designs crafted with premium materials. 
-            Each piece tells a story of culture, community, and pride.
+            Authentic South African designs crafted with premium materials. Each
+            piece tells a story of culture, community, and pride.
           </p>
         </div>
 
@@ -127,8 +134,8 @@ const Products = () => {
               onClick={() => setActiveCategory(category.id)}
               className={`px-6 py-3 rounded-full font-bold transition-all duration-300 ${
                 activeCategory === category.id
-                  ? 'bg-black text-white shadow-lg'
-                  : 'bg-white text-black border-2 border-gray-200 hover:border-black'
+                  ? "bg-black text-white shadow-lg"
+                  : "bg-white text-black border-2 border-gray-200 hover:border-black"
               }`}
             >
               {category.name}
@@ -139,7 +146,10 @@ const Products = () => {
         {/* Products Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProducts.map((product) => (
-            <div key={product.id} className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+            <div
+              key={product.id}
+              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
+            >
               {/* Product Image */}
               <div className="relative aspect-square bg-gray-100 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
@@ -147,10 +157,14 @@ const Products = () => {
                     <img src={IMAGES.tshirtBlack} alt="Logo" />
                   </div>
                 </div>
-                
+
                 {/* Badge */}
                 {product.badge && (
-                  <div className={`absolute top-4 left-4 px-3 py-1 rounded-full text-white text-sm font-bold ${getBadgeColor(product.badge)}`}>
+                  <div
+                    className={`absolute top-4 left-4 px-3 py-1 rounded-full text-white text-sm font-bold ${getBadgeColor(
+                      product.badge
+                    )}`}
+                  >
                     {product.badge}
                   </div>
                 )}
@@ -195,11 +209,17 @@ const Products = () => {
                       <div
                         key={index}
                         className={`w-4 h-4 rounded-full border-2 border-gray-300 ${
-                          color === 'Black' ? 'bg-black' :
-                          color === 'White' ? 'bg-white' :
-                          color === 'Grey' ? 'bg-gray-400' :
-                          color === 'Navy' ? 'bg-blue-900' :
-                          color === 'Gold' ? 'bg-yellow-400' : 'bg-gray-400'
+                          color === "Black"
+                            ? "bg-black"
+                            : color === "White"
+                            ? "bg-white"
+                            : color === "Grey"
+                            ? "bg-gray-400"
+                            : color === "Navy"
+                            ? "bg-blue-900"
+                            : color === "Gold"
+                            ? "bg-yellow-400"
+                            : "bg-gray-400"
                         }`}
                         title={color}
                       />
@@ -210,9 +230,13 @@ const Products = () => {
                 {/* Price */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
-                    <span className="text-2xl font-black text-black">{product.price}</span>
+                    <span className="text-2xl font-black text-black">
+                      {product.price}
+                    </span>
                     {product.originalPrice && (
-                      <span className="text-lg text-gray-500 line-through">{product.originalPrice}</span>
+                      <span className="text-lg text-gray-500 line-through">
+                        {product.originalPrice}
+                      </span>
                     )}
                   </div>
                   <button className="bg-black text-white p-2 rounded-lg hover:bg-gray-800 transition-colors">
