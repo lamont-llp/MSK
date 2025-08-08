@@ -48,7 +48,9 @@ const Hero = () => {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
               <button className="group bg-white text-black px-8 py-4 font-bold text-lg hover:bg-gray-200 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                <span>SHOP NOW</span>
+                <span>
+                  <a href="#products">SHOP NOW</a>
+                </span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
 
@@ -60,18 +62,21 @@ const Hero = () => {
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 pt-8 border-t border-gray-800">
+              {/*}
               <div className="text-center">
                 <div className="text-2xl font-bold text-white">500+</div>
                 <div className="text-sm text-gray-400 font-medium">
                   Happy Customers
                 </div>
               </div>
+              
               <div className="text-center">
                 <div className="text-2xl font-bold text-white">10+</div>
                 <div className="text-sm text-gray-400 font-medium">
                   Unique Designs
                 </div>
               </div>
+              */}
               <div className="text-center">
                 <div className="text-2xl font-bold text-white">100%</div>
                 <div className="text-sm text-gray-400 font-medium">

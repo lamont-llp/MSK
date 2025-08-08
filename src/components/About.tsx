@@ -102,6 +102,7 @@ const About = () => {
                   <p className="text-gray-300">Year Founded</p>
                 </div>
 
+                {/*}
                 <div className="border-t border-gray-700 pt-6 space-y-4">
                   <div className="flex justify-between items-center">
                     <span className="text-gray-300">Designs Created</span>
@@ -116,6 +117,7 @@ const About = () => {
                     <span className="font-bold text-2xl">1K+</span>
                   </div>
                 </div>
+                */}
 
                 <div className="bg-white bg-opacity-10 rounded-xl p-4 text-center">
                   <p className="font-bold text-lg">Our Mission</p>

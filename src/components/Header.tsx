@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Menu, X, ShoppingBag, User } from 'lucide-react';
-import IMAGES from '../assets/Images';
+import { useState } from "react";
+import { Menu, X, ShoppingBag, User } from "lucide-react";
+import IMAGES from "../assets/Images";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,11 +18,36 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#home" className="hover:text-gray-300 transition-colors font-medium">Home</a>
-            <a href="#about" className="hover:text-gray-300 transition-colors font-medium">Our Story</a>
-            <a href="#products" className="hover:text-gray-300 transition-colors font-medium">Shop</a>
-            <a href="#meaning" className="hover:text-gray-300 transition-colors font-medium">Ma se Kind</a>
-            <a href="#community" className="hover:text-gray-300 transition-colors font-medium">Community</a>
+            <a
+              href="#home"
+              className="hover:text-gray-300 transition-colors font-medium"
+            >
+              Home
+            </a>
+            <a
+              href="#about"
+              className="hover:text-gray-300 transition-colors font-medium"
+            >
+              Our Story
+            </a>
+            <a
+              href="#products"
+              className="hover:text-gray-300 transition-colors font-medium"
+            >
+              Shop
+            </a>
+            <a
+              href="#meaning"
+              className="hover:text-gray-300 transition-colors font-medium"
+            >
+              Ma se Kind
+            </a>
+            <a
+              href="#community"
+              className="hover:text-gray-300 transition-colors font-medium"
+            >
+              Community
+            </a>
           </nav>
 
           {/* Desktop Actions */}
@@ -44,7 +69,11 @@ const Header = () => {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-white hover:text-gray-300 transition-colors"
             >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -53,11 +82,36 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 border-t border-gray-800">
-              <a href="#home" className="block px-3 py-2 hover:bg-gray-800 transition-colors font-medium">Home</a>
-              <a href="#about" className="block px-3 py-2 hover:bg-gray-800 transition-colors font-medium">Our Story</a>
-              <a href="#products" className="block px-3 py-2 hover:bg-gray-800 transition-colors font-medium">Shop</a>
-              <a href="#meaning" className="block px-3 py-2 hover:bg-gray-800 transition-colors font-medium">Ma se Kind</a>
-              <a href="#community" className="block px-3 py-2 hover:bg-gray-800 transition-colors font-medium">Community</a>
+              <a
+                href="#home"
+                className="block px-3 py-2 hover:bg-gray-800 transition-colors font-medium"
+              >
+                Home
+              </a>
+              <a
+                href="#about"
+                className="block px-3 py-2 hover:bg-gray-800 transition-colors font-medium"
+              >
+                Our Story
+              </a>
+              <a
+                href="#products"
+                className="block px-3 py-2 hover:bg-gray-800 transition-colors font-medium"
+              >
+                Shop
+              </a>
+              <a
+                href="#meaning"
+                className="block px-3 py-2 hover:bg-gray-800 transition-colors font-medium"
+              >
+                Ma se Kind
+              </a>
+              <a
+                href="#community"
+                className="block px-3 py-2 hover:bg-gray-800 transition-colors font-medium"
+              >
+                Community
+              </a>
               <div className="flex items-center space-x-4 px-3 py-2 border-t border-gray-800 mt-2">
                 <button className="hover:text-gray-300 transition-colors">
                   <User className="w-5 h-5" />
