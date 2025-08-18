@@ -90,7 +90,7 @@ const Hero = () => {
           <div className="relative">
             <div className="relative z-10 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 shadow-2xl">
               <div className="aspect-square bg-gradient-to-br from-white to-gray-300 rounded-xl flex items-center justify-center text-black text-6xl font-black">
-                <img src={IMAGES.tshirtBlack} alt="Logo" />
+                <img src={IMAGES.foldedTshirtBlack} alt="Logo" />
               </div>
               <div className="mt-6 text-center">
                 <div className="text-lg font-bold">Premium Collection</div>

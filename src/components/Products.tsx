@@ -154,7 +154,7 @@ const Products = () => {
               <div className="relative aspect-square bg-gray-100 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
                   <div className="text-4xl font-black text-gray-400">
-                    <img src={IMAGES.tshirtBlack} alt="Logo" />
+                    <img src={IMAGES.foldedTshirtBlack} alt="Logo" />
                   </div>
                 </div>
 
