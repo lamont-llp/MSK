@@ -8,6 +8,7 @@ const Products = () => {
   const categories = [
     { id: "all", name: "All Products" },
     { id: "tshirts", name: "T-Shirts" },
+    { id: "hoodies", name: "Hoodies" },
     { id: "caps", name: "Caps" },
     { id: "limited", name: "Limited Edition" },
   ];
@@ -19,7 +20,7 @@ const Products = () => {
       category: "tshirts",
       price: "R290",
       originalPrice: null,
-      image: "/api/placeholder/300/300",
+      image: IMAGES.foldedTshirtWhite,
       rating: 4.8,
       reviews: 24,
       badge: "Bestseller",
@@ -28,13 +29,13 @@ const Products = () => {
     {
       id: 2,
       name: "Ma Se Kind Classic Hoodie",
-      category: "limited",
+      category: "hoodies",
       price: "R390",
       originalPrice: null,
-      image: "/api/placeholder/300/300",
+      image: IMAGES.hoodieBlackFront,
       rating: 5.0,
       reviews: 12,
-      badge: "Limited",
+      badge: null,
       colors: ["Black", "Gold"],
     },
     {
@@ -43,7 +44,7 @@ const Products = () => {
       category: "caps",
       price: "R150",
       originalPrice: null,
-      image: "/api/placeholder/300/300",
+      image: IMAGES.capBlack,
       rating: 4.9,
       reviews: 18,
       badge: "New",
@@ -55,7 +56,7 @@ const Products = () => {
       category: "tshirts",
       price: "R190",
       originalPrice: null,
-      image: "/api/placeholder/300/300",
+      image: IMAGES.foldedTshirtBlack,
       rating: 4.7,
       reviews: 31,
       badge: null,
@@ -63,14 +64,14 @@ const Products = () => {
     },
     {
       id: 5,
-      name: "Culture Cap Collection",
-      category: "caps",
+      name: "Sweater Collection",
+      category: "limited",
       price: "R249",
       originalPrice: "R299",
-      image: "/api/placeholder/300/300",
+      image: IMAGES.sweaterBlack,
       rating: 4.6,
       reviews: 15,
-      badge: "Sale",
+      badge: "New",
       colors: ["Black", "White", "Grey"],
     },
     {
@@ -154,7 +155,7 @@ const Products = () => {
               <div className="relative aspect-square bg-gray-100 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
                   <div className="text-4xl font-black text-gray-400">
-                    <img src={IMAGES.foldedTshirtBlack} alt="Logo" />
+                    <img src={product.image} alt="Product Image" />
                   </div>
                 </div>
 
